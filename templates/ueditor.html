@@ -1,0 +1,13 @@
+<script id="{{ UEditor.id }}" name="{{ UEditor.name }}"  style="display: inline-block;" type="text/plain">
+     {{ UEditor.value|safe }}
+</script>
+<script type="text/javascript">
+   {{UEditor.commands|safe}}
+   var config ={{ UEditor.settings|safe }};
+   config.elementPathEnabled = false; #禁用元素路径
+   config.wordCount  = false;  #禁用字数统计
+   var {{ UEditor.id  }} = UE.getEditor('{{ UEditor.id  }}',config);
+   {{ UEditor.id  }}.ready(function(){
+                {{ UEditor.bindEvents|safe }}
+                 });
+</script>
