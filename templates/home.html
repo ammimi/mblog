@@ -15,7 +15,7 @@
 
                 <div class="post-description">
                     <p>
-                        {{ post.content|safe|slice:"100" }}
+                        {{ post.content|safe|slice:"200" }}
                     </p>
                 </div>
                 <a class="pure-button pure-button-primary" href="{% url 'detail' id=post.id %}">Read More  </a>

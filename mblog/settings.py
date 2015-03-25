@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '&m&dhoybccwb@q$%53fjrj8ecfvacnzakcl+=sz)w!9sr+75m&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -85,16 +85,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),
-#        )
- 
+'''
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'media'),
+        )
+''' 
 TEMPLATE_DIRS = (
   os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
      )
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 CKEDITOR_UPLOAD_PATH = "images/"
 
 CKEDITOR_CONFIGS = {
@@ -118,3 +120,4 @@ CKEDITOR_CONFIGS = {
            # 'width': 300,
                },
     }
+
